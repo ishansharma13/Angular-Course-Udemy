@@ -8,3 +8,8 @@ To answer this question go and look at the main.ts file, the root component of t
 
 When the page is loaded on localhost or production, the compiled version of main.ts is imported as a script tag with src, these files are compiled using webpack or other bundlers
 
+```ng generate component <component-name>
+   or
+   ng g c <component-name>
+```
+
