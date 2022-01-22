@@ -13,3 +13,14 @@ When the page is loaded on localhost or production, the compiled version of main
    ng g c <component-name>
 ```
 
+either template or templateUrl must be present in every component, use template for inline html code
+
+either styles or stylesUrl can be used to specify multiple styles or css files for a singular component, this must be an array
+
+selector can be of three types:
+    html element: 'normal-string'
+    attribute: '[normal-string]'
+    class: '.normal-string'
+
+    selected by id wont work (not supported)
+
