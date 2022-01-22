@@ -24,3 +24,11 @@ selector can be of three types:
 
     selected by id wont work (not supported)
 
+### Data Binding
+__Data Binding can be postulated as communication between typescript code and html template__
+* For Example, Imagine a situation when user enters two numbers, these numbers get accessed by the typescript file for adding and then the result is rendered back in html*
+
+different types of bindings:
+1. for data output, property binding {{data}}
+2. event binding: when user clicks on a button and then some code gets executed
+3. two-way binding: when 1 and 2 are combined
