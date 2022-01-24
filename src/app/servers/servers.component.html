@@ -2,7 +2,10 @@
 <!-- <input type="text" class="form-control" (input)="onAddServerName($event)"/> -->
 <input type="text" class="form-control" [(ngModel)]="serverName"/>
 <button class="btn btn-primary" (click)="onCreateServer()">Add Server Name</button>
-<p *ngIf="serverCreated"> {{serverName}}</p>
+<p *ngIf="serverCreated else noServer"> {{serverName}}</p>
+<ng-template #noServer>
+    <p> No server was created</p>
+</ng-template>
 <hr>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onClickMe()"> Click Me</button>
 <p> Button clicked {{count}} times</p>
