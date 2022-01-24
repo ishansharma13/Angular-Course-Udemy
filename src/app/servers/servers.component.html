@@ -1,3 +1,7 @@
+<label>Server Name</label>
+<input type="text" class="form-control" (input)="onAddServerName($event)"/>
+<p> {{serverName}}</p>
+<hr>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onClickMe()"> Click Me</button>
 <p> Button clicked {{count}} times</p>
 <app-server></app-server>
