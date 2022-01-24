@@ -39,3 +39,8 @@ string interpolation: inside the html, we can return a variable x, like {{x}} wh
 
 Property Binding vs String Interpolation: when some data is to be printed or shown use string interpolation but when some value needs to be changed may it be an attribute of a html element, a directive or a component, use property binding
 
+
+### Directives:
+__Directives are instructions in the DOM, example ngModel, we can define our own directives also, which has variants like selector property, can also be considered as small reusable snippets across the app__
+
+__structural directives__: which change the structure of the dom, conditionally rendering html elements
