@@ -9,5 +9,5 @@
 <hr>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onClickMe()"> Click Me</button>
 <p> Button clicked {{count}} times</p>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
+<!-- <app-server></app-server> -->

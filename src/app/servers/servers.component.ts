@@ -10,6 +10,8 @@ export class ServersComponent implements OnInit {
   count: number = 0;
   serverName: string;
   serverCreated: boolean = false;
+  servers: Array<string> =  ['TestServer 1', 'TestServer 2'];
+
   constructor() { 
     setTimeout(()=>{
       this.allowNewServer = true;
@@ -23,8 +25,10 @@ export class ServersComponent implements OnInit {
   }
   onAddServerName(event: Event){
     this.serverName = (<HTMLInputElement>event.target).value;
+    
   }
   onCreateServer(){
     this.serverCreated = true;
+    this.servers.push(this.serverName);
   }
 }
