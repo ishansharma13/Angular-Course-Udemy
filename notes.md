@@ -29,9 +29,13 @@ __Data Binding can be postulated as communication between typescript code and ht
 * For Example, Imagine a situation when user enters two numbers, these numbers get accessed by the typescript file for adding and then the result is rendered back in html*
 
 different types of bindings:
-1. for data output, property binding {{data}}
-2. event binding: when user clicks on a button and then some code gets executed
-3. two-way binding: when 1 and 2 are combined
+1. for data output, string interpolation {{data}}
+2. property binding: [property], it is basically when you want to assign a javascript variable to a html element attribute
+3. event binding: when user clicks on a button and then some code gets executed
+4. two-way binding: when 1 and 2 are combined
 
 
 string interpolation: inside the html, we can return a variable x, like {{x}} where x is a string or something which can be converted to a string, if statements are not allowed, method calls can be done, and ternary statements may be used
+
+Property Binding vs String Interpolation: when some data is to be printed or shown use string interpolation but when some value needs to be changed may it be an attribute of a html element, a directive or a component, use property binding
+
