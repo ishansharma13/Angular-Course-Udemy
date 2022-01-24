@@ -32,3 +32,6 @@ different types of bindings:
 1. for data output, property binding {{data}}
 2. event binding: when user clicks on a button and then some code gets executed
 3. two-way binding: when 1 and 2 are combined
+
+
+string interpolation: inside the html, we can return a variable x, like {{x}} where x is a string or something which can be converted to a string, if statements are not allowed, method calls can be done, and ternary statements may be used
