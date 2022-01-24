@@ -1,3 +1,4 @@
-<button class="btn btn-primary" [disabled]="!allowNewServer"> Click Me</button>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onClickMe()"> Click Me</button>
+<p> Button clicked {{count}} times</p>
 <app-server></app-server>
 <app-server></app-server>

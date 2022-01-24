@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   allowNewServer: boolean = false;
+  count: number = 0;
   constructor() { 
     setTimeout(()=>{
       this.allowNewServer = true;
@@ -15,5 +16,7 @@ export class ServersComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onClickMe(){
+   this.count++;
+  }
 }
