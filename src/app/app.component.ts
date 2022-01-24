@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'first-app';
+  name: string = 'first-app';
+  disabled: boolean = false;
+  onClickButton(){
+    this.name = '';
+    this.disabled = true;
+  }
+  onInputChange(){  
+    this.disabled = this.name.length>0?false:true;
+  }
 }

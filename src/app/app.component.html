@@ -1,2 +1,5 @@
-<input type="text" [(ngModel)]="name"/>
+<input type="text" [(ngModel)]="name" (input)="onInputChange()"/>
+<hr>
 <p>{{name}}</p>
+<hr>
+<button (click)="onClickButton()" [disabled]="disabled">Reset</button>
