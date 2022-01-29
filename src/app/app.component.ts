@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  linkClicked: string = 'all';
   name = 'first-app';
+
+  onLinkClickListener(eventData: string){
+    this.linkClicked = eventData;
+  }
 }
