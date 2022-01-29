@@ -23,4 +23,7 @@
 
 
     __Property Binding is used when we want to pass data from parent to child component__
-    __Event Binding when we want to pass data from child to parent component __
+    __Event Binding when we want to pass data from child to parent component by adding a listener to PC__
+
+
+  
