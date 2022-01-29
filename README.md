@@ -22,8 +22,10 @@
         To actually do this, Input() decorator should be added before el
 
 
-    __Property Binding is used when we want to pass data from parent to child component__
-    __Event Binding when we want to pass data from child to parent component by adding a listener to PC__
+        __Property Binding is used when we want to pass data from parent to child component__
+        __Event Binding when we want to pass data from child to parent component by adding a listener to PC__
+
+    ### Local References can be passed by adding #refname inside any html element and that variable is accessible only in the html template NOT in the typescript code
 
 
   
