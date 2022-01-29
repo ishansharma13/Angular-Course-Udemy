@@ -30,6 +30,9 @@
     ### There are two ways in which we can access local references:
       1. Pass the element to the method when it is to be used
       2. using viewChild, when we want to access the element from typescript before calling the method
+        2.1. Dont try to change the value of element value using viewChild (not recommended), better methods do exist to achieve the same
+
+    ### ng-content in angular is equivalent to props.children in react
 
 
   
