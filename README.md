@@ -20,3 +20,7 @@
         This wont because by default properties of a child component or for that sake any component are not accessible to outside world by default.
 
         To actually do this, Input() decorator should be added before el
+
+
+    __Property Binding is used when we want to pass data from parent to child component__
+    __Event Binding when we want to pass data from child to parent component __
