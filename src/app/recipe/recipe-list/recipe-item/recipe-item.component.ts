@@ -8,14 +8,13 @@ import { Recipe } from '../../recipe.model';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
-  @Output() recipeClicked = new EventEmitter<string>();
+  @Output() recipeClicked = new EventEmitter<void>();
   @Input() recipe: Recipe;
   constructor() { }
 
   ngOnInit(): void {
   }
-  onRecipeCardClick(name: string){
-    console.log("from recipe-item: ",name);
-    this.recipeClicked.emit(name);
+  onRecipeCardClick(){
+    this.recipeClicked.emit();
   }
 }

@@ -17,13 +17,10 @@ export class RecipeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onRecipeItemClicked(eventData: string){
+  onRecipeItemClicked(eventData: Recipe){
     // console.log(eventData);
-    this.recipe = this.recipes.find(recipe => {
-      // console.log(recipe);
-      return recipe.name === eventData;
-    }
-    )
+    this.recipe = eventData;
+    
     // console.log(this.recipe);
   }
 }
