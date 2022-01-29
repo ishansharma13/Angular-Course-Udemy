@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Recipe } from "../recipe.model";
 @Component({
   selector: 'app-recipe-list',
@@ -6,15 +6,14 @@ import { Recipe } from "../recipe.model";
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  recipes: Recipe[] = [
-    new Recipe('Test Recipe','Test Desc','https://image.shutterstock.com/image-photo/notepad-your-recipe-herbs-spices-260nw-370298699.jpg'),
-    new Recipe('Test Recipe','Test Desc','https://image.shutterstock.com/image-photo/notepad-your-recipe-herbs-spices-260nw-370298699.jpg'),
-    new Recipe('Test Recipe','Test Desc','https://image.shutterstock.com/image-photo/notepad-your-recipe-herbs-spices-260nw-370298699.jpg')
-    
-  ];
+  @Output() relayFired = new EventEmitter<string>();
+  @Input() recipes: Recipe[];
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  onRelayToRecipe(eventData: string){
+    console.log("from recipe-list: ",eventData);
+    this.relayFired.emit(eventData);
+  }
 }
