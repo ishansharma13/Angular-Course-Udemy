@@ -1,27 +1,22 @@
-# FirstApp
+#Section-5:
+    ## Communicating between components
+      ### Property and event binding is also possible on compponents also
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
-## Development server
+      ### Setting custom property binding between components (Binding to custom Properties)
+        #### By default, any property in a component is accessible by that component only no parent components can access it,
+          By parent component, I mean the component which has the selector of the component in consideration
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+        #### One may do it like this:
+            define a property in CC.
+            add the selector of CC to PC
+            Try to add a property binding syntax [el]="pel"
 
-## Code scaffolding
+            CC = Child Component
+            PC = Parent Component
+            el = property in CC
+            pel = property in PC
+        
+        This wont because by default properties of a child component or for that sake any component are not accessible to outside world by default.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+        To actually do this, Input() decorator should be added before el
