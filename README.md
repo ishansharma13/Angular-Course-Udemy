@@ -27,5 +27,9 @@
 
     ### Local References can be passed by adding #refname inside any html element and that variable is accessible only in the html template NOT in the typescript code
 
+    ### There are two ways in which we can access local references:
+      1. Pass the element to the method when it is to be used
+      2. using viewChild, when we want to access the element from typescript before calling the method
+
 
   
