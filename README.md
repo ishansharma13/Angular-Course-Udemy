@@ -1,38 +1,27 @@
-#Section-5:
-    ## Communicating between components
-      ### Property and event binding is also possible on compponents also
+# MyFirstApp
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
-      ### Setting custom property binding between components (Binding to custom Properties)
-        #### By default, any property in a component is accessible by that component only no parent components can access it,
-          By parent component, I mean the component which has the selector of the component in consideration
+## Development server
 
-        #### One may do it like this:
-            define a property in CC.
-            add the selector of CC to PC
-            Try to add a property binding syntax [el]="pel"
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-            CC = Child Component
-            PC = Parent Component
-            el = property in CC
-            pel = property in PC
-        
-        This wont because by default properties of a child component or for that sake any component are not accessible to outside world by default.
+## Code scaffolding
 
-        To actually do this, Input() decorator should be added before el
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Build
 
-        __Property Binding is used when we want to pass data from parent to child component__
-        __Event Binding when we want to pass data from child to parent component by adding a listener to PC__
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-    ### Local References can be passed by adding #refname inside any html element and that variable is accessible only in the html template NOT in the typescript code
+## Running unit tests
 
-    ### There are two ways in which we can access local references:
-      1. Pass the element to the method when it is to be used
-      2. using viewChild, when we want to access the element from typescript before calling the method
-        2.1. Dont try to change the value of element value using viewChild (not recommended), better methods do exist to achieve the same
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-    ### ng-content in angular is equivalent to props.children in react
+## Running end-to-end tests
 
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-  
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

@@ -6,21 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements = [{type:'server',name: 'bbb',content: 'ccc'}];
+  value: string = 'even';
+  num: number = 0;
+  onNumberIncremented(eventData:{num:number}){
+    this.num = eventData.num;
+    if(eventData.num%2 === 0){
+      this.value = 'even';
+    }else{
+      this.value = 'odd';
+    }
 
-
-  onServerAdded(serverData: {serverName: string, serverContent: string}){
-    this.serverElements.push({
-      type: 'server',
-      name: serverData.serverName,
-      content: serverData.serverContent
-    });
-  }
-  onBlueprintAdded(blueprintData: {serverName: string, serverContent: string}){
-    this.serverElements.push({
-      type: 'blueprint',
-      name: blueprintData.serverName,
-      content: blueprintData.serverContent
-    });
   }
 }
