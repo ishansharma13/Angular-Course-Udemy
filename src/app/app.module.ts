@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { RendererDirecitveDirective } from './renderer-direcitve.directive';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RendererDirecitveDirective
+    RendererDirecitveDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

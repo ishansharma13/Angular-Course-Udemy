@@ -12,7 +12,7 @@
           {{number}}
         </li>
       </ul>
-      <ng-template [ngIf]="onlyOdd">
+      <ng-template [appUnless]="!onlyOdd">
         <p>Only odd</p>
       </ng-template>
       <p appRendererDirecitve defaultBackground='green' defaultTextColor='blue'> Using Directive</p>
