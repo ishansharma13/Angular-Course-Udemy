@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { RendererDirecitveDirective } from './renderer-direcitve.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RendererDirecitveDirective
   ],
   imports: [
     BrowserModule,

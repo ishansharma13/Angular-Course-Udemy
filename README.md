@@ -6,7 +6,9 @@ Structural Directives are responsible for editing the DOM, used to add/remove/ch
 
 Attribute level Directives are majorly responsible for changing the element/property of a specific component they are added to
 
-## Development server
+__ One cannot have more than one structural directive on a single element __
+## Creating a custom directive
+  Use renderer to make DOM manipulation instead of changing the ElementRef directly
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
