@@ -10,7 +10,9 @@ import { LoggingService } from '../shared/logging.service';
 })
 export class NewAccountComponent {
  
-  constructor(private accountsService: AccountsService){}
+  constructor(private accountsService: AccountsService){
+    this.accountsService.statusChanged.subscribe((status:string)=>console.log("Came through Account Component: ",status));
+  }
   onCreateAccount(accountName: string, accountStatus: string) {
     this.accountsService.addAccount({
       name: accountName,
