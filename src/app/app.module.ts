@@ -17,7 +17,7 @@ import { NewAccountComponent } from './new-account/new-account.component';
     BrowserModule,
     FormsModule,
   ],
-  providers: [],
+//  providers: [AccountsService,LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,15 +6,15 @@ import { LoggingService } from '../shared/logging.service';
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css'],
-  providers: [LoggingService]
+  // providers: [LoggingService]
 })
 export class AccountComponent {
   @Input() account: {name: string, status: string};
   @Input() id: number;
 
-  constructor(private loggingService: LoggingService,private accountsService: AccountsService){}
+  constructor(private accountsService: AccountsService){}
   onSetTo(status: string) {
     this.accountsService.changeStatus(this.id, status);
-    this.loggingService.logToConsole(status);
+    
   }
 }
