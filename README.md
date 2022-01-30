@@ -11,7 +11,7 @@ __ One cannot have more than one structural directive on a single element __
   Use renderer to make DOM manipulation instead of changing the ElementRef directly
 
 ** HostListener: when you want to listen to events and change something on a directive, should be used with renderers **
-** HostBinding: an easire way to achieve the same (HostListener) **
+** HostBinding: changing the value for attributes of host without using renderer**
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
