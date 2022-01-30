@@ -1,6 +1,10 @@
-# FirstApp
+# Section-7 Directives - A deep dive
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+## Directive type: Structural vs Attributes
+
+Structural Directives are responsible for editing the DOM, used to add/remove/change DOM elements based on conditions
+
+Attribute level Directives are majorly responsible for changing the element/property of a specific component they are added to
 
 ## Development server
 
