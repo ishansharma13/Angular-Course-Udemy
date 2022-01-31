@@ -6,14 +6,11 @@ import { Recipe } from "../recipe.model";
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  @Output() relayFired = new EventEmitter<Recipe>();
+  
   @Input() recipes: Recipe[];
   constructor() { }
 
   ngOnInit(): void {
   }
-  onRelayToRecipe(eventData: Recipe){
-    console.log("from recipe-list: ",eventData);
-    this.relayFired.emit(eventData);
-  }
+  
 }

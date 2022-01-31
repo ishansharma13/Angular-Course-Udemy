@@ -1,26 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from './recipe.model';
+import { RecipeService } from './recipe.service';
 @Component({
   selector: 'app-recipe',
   templateUrl: './recipe.component.html',
-  styleUrls: ['./recipe.component.css']
+  styleUrls: ['./recipe.component.css'],
+  providers: [RecipeService]
 })
 export class RecipeComponent implements OnInit {
   recipe: Recipe;
-  recipes: Recipe[] = [
-    new Recipe('Test Recipe 1','Test Desc','https://image.shutterstock.com/image-photo/notepad-your-recipe-herbs-spices-260nw-370298699.jpg'),
-    new Recipe('Test Recipe 2','Test Desc','https://image.shutterstock.com/image-photo/notepad-your-recipe-herbs-spices-260nw-370298699.jpg'),
-    new Recipe('Test Recipe 3','Test Desc','https://image.shutterstock.com/image-photo/notepad-your-recipe-herbs-spices-260nw-370298699.jpg')
-    
-  ];
-  constructor() { }
+  recipes: Recipe[];
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
-  }
-  onRecipeItemClicked(eventData: Recipe){
-    // console.log(eventData);
-    this.recipe = eventData;
-    
-    // console.log(this.recipe);
+    this.recipes = this.recipeService.getRecipes();
+    this.recipeService.recipeClicked.subscribe((recipe: Recipe)=>{
+      this.recipe = recipe;
+    })
   }
 }
